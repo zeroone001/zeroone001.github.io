@@ -6,16 +6,16 @@
   <meta name="author" content="zeroone001">
   
   
-  <title>hexo 使用教程 | zeroone001的博客</title>
+  <title>怎么让一个 div 水平垂直居中 | zeroone001的博客</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   
-    <meta name="keywords" content="hexo,hexo,">
+    <meta name="keywords" content="css,html,css,">
   
 
   
-  <meta name="description" content="hexo技术搭建博客">
+  <meta name="description" content="div 标签居中显示的一些归类总结">
 
   
 
@@ -168,7 +168,7 @@
     </span>
     
       <span>
-        | <a href="/categories/hexo/"><i class="fa fa-bookmark"></i>hexo</a>
+        | <a href="/categories/css/"><i class="fa fa-bookmark"></i>css</a>
       </span>
     
     
@@ -178,39 +178,19 @@
     
   </div>
   <h1 class="passage-title">
-    hexo 使用教程
+    怎么让一个 div 水平垂直居中
   </h1>
   
   <article class="passage-article">
     <p></p>
-<h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><blockquote>
-<p>依托github.io 建自己的博客网站</p>
-</blockquote>
-<h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><ol>
-<li>sudo npm install hexo-cli -g</li>
-<li>hexo init generate-blog</li>
-<li>hexo new “文章名”</li>
-<li>hexo g #生成静态文件</li>
-</ol>
-<h3 id="配置SSH"><a href="#配置SSH" class="headerlink" title="配置SSH"></a>配置SSH</h3><blockquote>
-<p>目的：上传代码到GitHub上，使用 <code>hexo d</code></p>
-</blockquote>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd ~/.ssh # ssh密钥存放的路径</span><br></pre></td></tr></table></figure>
-<ol>
-<li><p>生成密钥</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C "ilylys@163.com"</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>然后去找文件<code>.ssh/id_rsa.pub</code>,复制里面的内容</p>
-</li>
-<li>去GitHub个人设置， SSH and GPG keys -&gt; New SSH key</li>
-<li>粘贴，保存</li>
-<li>测试，<code>ssh -T git@github.com</code> # 注意邮箱地址不用改</li>
-</ol>
-<h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><p>配置_config.yml中有关deploy的部分：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: git@github.com:zeroone001/zeroone001.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure></p>
-<p>安装插件：<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure></p>
-<h3 id="HEXO-相关命令"><a href="#HEXO-相关命令" class="headerlink" title="HEXO 相关命令"></a>HEXO 相关命令</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">hexo new "article name" #新建文章</span><br><span class="line">hexo clean #清理public</span><br><span class="line">hexo g #生成静态页面到public目录</span><br><span class="line">hexo s #启动本地服务，查看编写的页面</span><br><span class="line">hexo d #上传静态文件到GitHub</span><br><span class="line">hexo help #查看帮助</span><br></pre></td></tr></table></figure>
-<h3 id="theme"><a href="#theme" class="headerlink" title="theme"></a>theme</h3><p><a href="https://github.com/dongyuanxin/theme-ad" target="_blank" rel="noopener">theme-ad</a><br><a href="https://godbmw.com/passages/2019-03-03-theme-ad-docs-zh/" target="_blank" rel="noopener">主题文档</a></p>
-<h4 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h4><p><a href="https://www.cnblogs.com/liuxianan/p/build-blog-website-by-hexo-github.html" target="_blank" rel="noopener">参考资料</a><br><a href="https://github.com/hexojs/hexo/" target="_blank" rel="noopener">hexoGithub</a><br><a href="https://hexo.io/zh-cn/" target="_blank" rel="noopener">hexo官网</a></p>
+<h4 id="结构"><a href="#结构" class="headerlink" title="结构"></a>结构</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"parent"</span>&gt;</span><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"child"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h4 id="样式"><a href="#样式" class="headerlink" title="样式"></a>样式</h4><p>1.<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span><span class="selector-class">.parent</span> &#123;</span><br><span class="line">    <span class="attribute">display</span>: flex;</span><br><span class="line">    <span class="attribute">justify-content</span>: center;</span><br><span class="line">    <span class="attribute">align-items</span>: center;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>2.<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span><span class="selector-class">.parent</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-class">.child</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">50%</span>;</span><br><span class="line">    <span class="attribute">left</span>: <span class="number">50%</span>;</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">translate</span>(-50%, -50%);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* 或者 */</span></span><br><span class="line"><span class="selector-tag">div</span><span class="selector-class">.child</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">50px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">10px</span>;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">50%</span>;</span><br><span class="line">    <span class="attribute">left</span>: <span class="number">50%</span>;</span><br><span class="line">    <span class="attribute">margin-left</span>: -<span class="number">25px</span>;</span><br><span class="line">    <span class="attribute">margin-top</span>: -<span class="number">5px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* 或 */</span></span><br><span class="line"><span class="selector-tag">div</span><span class="selector-class">.child</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">50px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">10px</span>;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">left</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">right</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">bottom</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">margin</span>: auto;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>3.<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span><span class="selector-class">.parent</span> &#123;</span><br><span class="line">    <span class="attribute">display</span>: grid;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-class">.child</span> &#123;</span><br><span class="line">    <span class="attribute">justify-self</span>: center;</span><br><span class="line">    <span class="attribute">align-self</span>: center;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>4.<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span><span class="selector-class">.parent</span>&#123;</span><br><span class="line">  <span class="attribute">display</span>:flex;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-class">.child</span>&#123;</span><br><span class="line">  <span class="attribute">margin</span>:auto;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h4 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h4><ul>
+<li><a href="https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/92" target="_blank" rel="noopener">资料1</a></li>
+</ul>
   </article>
   <aside class="table-content" id="site-toc">
   <div class="table-content-title">
@@ -218,7 +198,7 @@
     <span>目录</span>
   </div>
   <div class="table-content-main">
-    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#背景"><span class="toc-text">背景</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#准备工作"><span class="toc-text">准备工作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#配置SSH"><span class="toc-text">配置SSH</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#配置"><span class="toc-text">配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#HEXO-相关命令"><span class="toc-text">HEXO 相关命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#theme"><span class="toc-text">theme</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#参考资料"><span class="toc-text">参考资料</span></a></li></ol></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#结构"><span class="toc-text">结构</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#样式"><span class="toc-text">样式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#参考资料"><span class="toc-text">参考资料</span></a></li></ol>
   </div>
 </aside>
   
@@ -227,7 +207,7 @@
       
         <div>
           原文链接: 
-          <a href target="_blank">https://zeroone001.github.io/passages/hexo-使用教程/</a>
+          <a href target="_blank">https://zeroone001.github.io/passages/怎么让一个-div-水平垂直居中/</a>
         </div>
       
       <div>
@@ -238,7 +218,9 @@
   
     <div class="passage-tags">
      
-      <a href="/tags/hexo/"><i class="fa fa-tags"></i>hexo</a>
+      <a href="/tags/html/"><i class="fa fa-tags"></i>html</a>
+     
+      <a href="/tags/css/"><i class="fa fa-tags"></i>css</a>
     
     </div>
   
@@ -355,10 +337,10 @@
 
 <div class="bottom-bar">
   <div class="bottom-bar-left">
-    <a href="/passages/怎么让一个-div-水平垂直居中/" data-enable="true">
+    <a href="javascript:void(0);" data-enable="false">
       <i class="fa fa-arrow-left"></i>
     </a>
-    <a href="javascript:void(0);" data-enable="false">
+    <a href="/passages/hexo-使用教程/" data-enable="true">
       <i class="fa fa-arrow-right"></i>
     </a>
   </div>
