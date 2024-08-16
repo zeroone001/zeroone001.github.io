@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>LazyMan类 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="写一个lazyman的类">
+<meta property="og:type" content="article">
+<meta property="og:title" content="LazyMan类">
+<meta property="og:url" content="http://example.com/2019/04/18/LazyMan%E7%B1%BB/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="写一个lazyman的类">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2019-04-17T23:26:02.000Z">
+<meta property="article:modified_time" content="2024-08-16T06:50:23.557Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="lazyman">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-LazyMan类" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2019/04/18/LazyMan%E7%B1%BB/" class="article-date">
+  <time class="dt-published" datetime="2019-04-17T23:26:02.000Z" itemprop="datePublished">2019-04-18</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/javascript/">javascript</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      LazyMan类
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>写一个lazyman的类</p>
+<span id="more"></span>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="title class_">LazyMan</span>(<span class="string">&#x27;Tony&#x27;</span>);</span><br><span class="line"><span class="comment">// Hi I am Tony</span></span><br><span class="line"></span><br><span class="line"><span class="title class_">LazyMan</span>(<span class="string">&#x27;Tony&#x27;</span>).<span class="title function_">sleep</span>(<span class="number">10</span>).<span class="title function_">eat</span>(<span class="string">&#x27;lunch&#x27;</span>);</span><br><span class="line"><span class="comment">// Hi I am Tony</span></span><br><span class="line"><span class="comment">// 等待了10秒...</span></span><br><span class="line"><span class="comment">// I am eating lunch</span></span><br><span class="line"></span><br><span class="line"><span class="title class_">LazyMan</span>(<span class="string">&#x27;Tony&#x27;</span>).<span class="title function_">eat</span>(<span class="string">&#x27;lunch&#x27;</span>).<span class="title function_">sleep</span>(<span class="number">10</span>).<span class="title function_">eat</span>(<span class="string">&#x27;dinner&#x27;</span>);</span><br><span class="line"><span class="comment">// Hi I am Tony</span></span><br><span class="line"><span class="comment">// I am eating lunch</span></span><br><span class="line"><span class="comment">// 等待了10秒...</span></span><br><span class="line"><span class="comment">// I am eating diner</span></span><br><span class="line"></span><br><span class="line"><span class="title class_">LazyMan</span>(<span class="string">&#x27;Tony&#x27;</span>).<span class="title function_">eat</span>(<span class="string">&#x27;lunch&#x27;</span>).<span class="title function_">eat</span>(<span class="string">&#x27;dinner&#x27;</span>).<span class="title function_">sleepFirst</span>(<span class="number">5</span>).<span class="title function_">sleep</span>(<span class="number">10</span>).<span class="title function_">eat</span>(<span class="string">&#x27;junk food&#x27;</span>);</span><br><span class="line"><span class="comment">// Hi I am Tony</span></span><br><span class="line"><span class="comment">// 等待了5秒...</span></span><br><span class="line"><span class="comment">// I am eating lunch</span></span><br><span class="line"><span class="comment">// I am eating dinner</span></span><br><span class="line"><span class="comment">// 等待了10秒...</span></span><br><span class="line"><span class="comment">// I am eating junk food</span></span><br></pre></td></tr></table></figure>
+
+<p>Answer</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">LazyManClass</span> &#123;</span><br><span class="line">    <span class="title function_">constructor</span>(<span class="params">name</span>) &#123;</span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">taskList</span> = [];</span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">name</span> = name;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">`Hi I am <span class="subst">$&#123;<span class="variable language_">this</span>.name&#125;</span>`</span>);</span><br><span class="line">        <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">            <span class="variable language_">this</span>.<span class="title function_">next</span>();</span><br><span class="line">        &#125;, <span class="number">0</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="title function_">eat</span> (name) &#123;</span><br><span class="line">        <span class="keyword">var</span> that = <span class="variable language_">this</span>;</span><br><span class="line">        <span class="keyword">var</span> fn = (<span class="keyword">function</span> (<span class="params">n</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">                <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">`I am eating <span class="subst">$&#123;n&#125;</span>`</span>)</span><br><span class="line">                that.<span class="title function_">next</span>();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;)(name);</span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">taskList</span>.<span class="title function_">push</span>(fn);</span><br><span class="line">        <span class="keyword">return</span> <span class="variable language_">this</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="title function_">sleepFirst</span> (time) &#123;</span><br><span class="line">        <span class="keyword">var</span> that = <span class="variable language_">this</span>;</span><br><span class="line">        <span class="keyword">var</span> fn = (<span class="keyword">function</span> (<span class="params">t</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">                <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">                    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">`等待了<span class="subst">$&#123;t&#125;</span>秒...`</span>)</span><br><span class="line">                    that.<span class="title function_">next</span>();</span><br><span class="line">                &#125;, t * <span class="number">1000</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;)(time);</span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">taskList</span>.<span class="title function_">unshift</span>(fn);</span><br><span class="line">        <span class="keyword">return</span> <span class="variable language_">this</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="title function_">sleep</span> (time) &#123;</span><br><span class="line">        <span class="keyword">var</span> that = <span class="variable language_">this</span></span><br><span class="line">        <span class="keyword">var</span> fn = (<span class="keyword">function</span> (<span class="params">t</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">                <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">                    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">`等待了<span class="subst">$&#123;t&#125;</span>秒...`</span>)</span><br><span class="line">                    that.<span class="title function_">next</span>();</span><br><span class="line">                &#125;, t * <span class="number">1000</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;)(time);</span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">taskList</span>.<span class="title function_">push</span>(fn);</span><br><span class="line">        <span class="keyword">return</span> <span class="variable language_">this</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="title function_">next</span> () &#123;</span><br><span class="line">        <span class="keyword">var</span> fn = <span class="variable language_">this</span>.<span class="property">taskList</span>.<span class="title function_">shift</span>();</span><br><span class="line">        fn &amp;&amp; <span class="title function_">fn</span>();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">function</span> <span class="title function_">LazyMan</span>(<span class="params">name</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">LazyManClass</span>(name);</span><br><span class="line">&#125;</span><br><span class="line"><span class="title class_">LazyMan</span>(<span class="string">&#x27;Tony&#x27;</span>).<span class="title function_">eat</span>(<span class="string">&#x27;lunch&#x27;</span>).<span class="title function_">eat</span>(<span class="string">&#x27;dinner&#x27;</span>).<span class="title function_">sleepFirst</span>(<span class="number">5</span>).<span class="title function_">sleep</span>(<span class="number">4</span>).<span class="title function_">eat</span>(<span class="string">&#x27;junk food&#x27;</span>);</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2019/04/18/LazyMan%E7%B1%BB/" data-id="clzwcru1l0000ah9b4iruhyyw" data-title="LazyMan类" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/lazyman/" rel="tag">lazyman</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2019/04/13/hexo%E8%87%AA%E5%AE%9A%E4%B9%89Front-matter%E6%A8%A1%E7%89%88%E9%85%8D%E7%BD%AE/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">hexo自定义Front-matter模版配置</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/css/">css</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/hexo/">hexo</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/">javascript</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/" rel="tag">css</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html/" rel="tag">html</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/lazyman/" rel="tag">lazyman</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/hexo/" style="font-size: 20px;">hexo</a> <a href="/tags/html/" style="font-size: 10px;">html</a> <a href="/tags/lazyman/" style="font-size: 10px;">lazyman</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/04/18/LazyMan%E7%B1%BB/">LazyMan类</a>
+          </li>
+        
+          <li>
+            <a href="/2019/04/13/hexo%E8%87%AA%E5%AE%9A%E4%B9%89Front-matter%E6%A8%A1%E7%89%88%E9%85%8D%E7%BD%AE/">hexo自定义Front-matter模版配置</a>
+          </li>
+        
+          <li>
+            <a href="/2019/04/13/%E6%80%8E%E4%B9%88%E8%AE%A9%E4%B8%80%E4%B8%AA-div-%E6%B0%B4%E5%B9%B3%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD/">怎么让一个 div 水平垂直居中</a>
+          </li>
+        
+          <li>
+            <a href="/2019/04/13/hexo-%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/">hexo 使用教程</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2024 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
